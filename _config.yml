@@ -9,7 +9,7 @@ navigation:
     url: /
   - name: 关于11
     url: /about
-  - name: 分类12的2的
+  - name: 分类12的2的11
     url: /tags
 
 paginate: 8
