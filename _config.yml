@@ -7,9 +7,9 @@ favicon: https://edison553.github.io/images/dog.png
 navigation:
   - name: 首页11
     url: /
-  - name: 关于
+  - name: 关于11
     url: /about
-  - name: 分类
+  - name: 分类12
     url: /tags
 
 paginate: 8
