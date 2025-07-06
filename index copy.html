@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Imaging and Schizophrenia Group</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#36BFFA',
+                        neutral: '#F5F7FA',
+                        dark: '#1D2129',
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .transition-transform-opacity {
+                transition-property: transform, opacity;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                transition-duration: 300ms;
+            }
+        }
+    </style>
+</head>
+<body class="font-inter text-dark bg-white">
+    <!-- Navigation -->
+    <header id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-sm shadow-sm">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center">
+                        <img src="pics/MSBlogo.jpg" alt="Brain Imaging and Schizophrenia Group Logo" class="h-8">
+                    </a>
+                </div>
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-8">
+                        <li><a href="#about" class="text-dark hover:text-primary transition-colors">About</a></li>
+                        <li><a href="#research" class="text-dark hover:text-primary transition-colors">Research</a></li>
+                        <li><a href="#members" class="text-dark hover:text-primary transition-colors">Members</a></li>
+                        <li><a href="#publications" class="text-dark hover:text-primary transition-colors">Publications</a></li>
+                        <li><a href="#contact" class="text-dark hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-dark hover:text-primary">
+                        <i class="fa fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-3 space-y-1">
+                <a href="#about" class="block px-3 py-2 text-base text-dark hover:text-primary">About</a>
+                <a href="#research" class="block px-3 py-2 text-base text-dark hover:text-primary">Research</a>
+                <a href="#members" class="block px-3 py-2 text-base text-dark hover:text-primary">Members</a>
+                <a href="#publications" class="block px-3 py-2 text-base text-dark hover:text-primary">Publications</a>
+                <a href="#contact" class="block px-3 py-2 text-base text-dark hover:text-primary">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-white/90 to-white/60"></div>
+            <img src="https://picsum.photos/id/1049/1920/1080" alt="Brain Imaging Research" class="w-full h-full object-cover">
+        </div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold text-dark mb-6 leading-tight text-shadow">
+                Brain Imaging and <br class="hidden md:block">Schizophrenia Research
+            </h1>
+            <p class="text-[clamp(1.1rem,2vw,1.5rem)] text-dark/80 max-w-3xl mx-auto mb-10">
+                Advancing understanding of brain disorders through fMRI analysis and computational methods
+            </p>
+            <a href="#about" class="inline-block px-8 py-3 bg-primary hover:bg-primary/90 text-white font-medium rounded-md transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                Explore Our Research
+            </a>
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#about" class="text-primary/80 hover:text-primary">
+                <i class="fa fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">About Our Group</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <h3 class="text-2xl font-semibold text-dark mb-6">Our Mission</h3>
+                    <p class="text-lg text-dark/80 mb-6">
+                        The Brain Imaging and Schizophrenia Group focuses on using advanced fMRI techniques and computational methods to study the neural basis of schizophrenia and other brain disorders. Our research aims to improve diagnosis, treatment, and prevention strategies through innovative neuroimaging analysis.
+                    </p>
+                    <p class="text-lg text-dark/80 mb-6">
+                        We are part of the "Brain Imaging and Pattern Recognition Laboratory" led by Professor Chen Huafu at the School of Life Science and Technology, University of Electronic Science and Technology of China (UESTC).
+                    </p>
+                    <div class="mt-8">
+                        <a href="#research" class="inline-flex items-center text-primary font-medium hover:text-primary/80">
+                            Learn about our research <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2 relative">
+                    <div class="relative z-10 rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition-transform duration-500">
+                        <img src="https://picsum.photos/id/1002/800/600" alt="Research team collaboration" class="w-full h-auto">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 w-64 h-64 bg-primary/10 rounded-full -z-0"></div>
+                    <div class="absolute -top-6 -left-6 w-32 h-32 bg-secondary/10 rounded-full -z-0"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logo Section (Visible on Scroll) -->
+    <section id="logo-section" class="py-20 bg-neutral relative overflow-hidden">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-12">Our Laboratory</h2>
+        
+        <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-lg relative z-10">
+            <div class="flex justify-center mb-8">
+                <!-- 修改这里：更大的容器，无边距 -->
+                <div class="w-60 h-60 bg-primary/10 flex items-center justify-center">
+                    <img src="pics/MSBlogo.jpg" 
+                         alt="Brain Imaging and Pattern Recognition Laboratory Logo"
+                         class="w-full h-full object-contain">
+                </div>
+            </div>
+            <h3 class="text-2xl font-semibold text-dark mb-4">Brain Imaging and Pattern Recognition Laboratory</h3>
+            <p class="text-lg text-dark/80 mb-6">
+                Led by Professor Chen Huafu, our lab specializes in developing and applying advanced imaging techniques to understand complex brain disorders.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#members" class="px-6 py-2 bg-primary hover:bg-primary/90 text-white rounded-md transition-colors">
+                    Meet Our Team
+                </a>
+                <a href="#contact" class="px-6 py-2 bg-white border border-primary text-primary hover:bg-primary/5 rounded-md transition-colors">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">Our Research</h2>
+                <p class="text-lg text-dark/70 max-w-3xl mx-auto">
+                    Exploring the neural mechanisms of schizophrenia and other brain disorders through advanced fMRI analysis and computational methods
+                </p>
+                <div class="w-20 h-1 bg-primary mx-auto mt-6"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Research Area 1 -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow p-6 border border-gray-100 group">
+                    <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                        <i class="fa fa-brain text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-dark mb-4">fMRI Data Analysis</h3>
+                    <p class="text-dark/70 mb-4">
+                        Advanced processing and analysis of functional magnetic resonance imaging data to identify neural correlates of brain disorders.
+                    </p>
+                    <a href="#" class="inline-flex items-center text-primary font-medium hover:text-primary/80">
+                        Learn more <i class="fa fa-arrow-right ml-2 group-hover:ml-3 transition-all"></i>
+                    </a>
+                </div>
+                
+                <!-- Research Area 2 -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow p-6 border border-gray-100 group">
+                    <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                        <i class="fa fa-code text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-dark mb-4">Machine Learning Applications</h3>
+                    <p class="text-dark/70 mb-4">
+                        Developing machine learning and deep learning models to analyze brain imaging data and identify biomarkers for early diagnosis.
+                    </p>
+                    <a href="#" class="inline-flex items-center text-primary font-medium hover:text-primary/80">
+                        Learn more <i class="fa fa-arrow-right ml-2 group-hover:ml-3 transition-all"></i>
+                    </a>
+                </div>
+                
+                <!-- Research Area 3 -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow p-6 border border-gray-100 group">
+                    <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                        <i class="fa fa-stethoscope text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-dark mb-4">Clinical Translation</h3>
+                    <p class="text-dark/70 mb-4">
+                        Translating neuroimaging findings into clinical applications to improve diagnosis and treatment strategies for brain disorders.
+                    </p>
+                    <a href="#" class="inline-flex items-center text-primary font-medium hover:text-primary/80">
+                        Learn more <i class="fa fa-arrow-right ml-2 group-hover:ml-3 transition-all"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="#publications" class="inline-block px-8 py-3 bg-white border border-primary text-primary hover:bg-primary/5 rounded-md transition-colors">
+                    View Our Publications
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="members" class="py-20 bg-neutral">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">Our Team</h2>
+                <p class="text-lg text-dark/70 max-w-3xl mx-auto">
+                    Meet the researchers and scientists behind our groundbreaking work in brain imaging and schizophrenia research
+                </p>
+                <div class="w-20 h-1 bg-primary mx-auto mt-6"></div>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1: Professor -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden group hover:shadow-xl transition-all">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/id/1012/400/400" alt="Professor Chen Huafu" class="w-full h-64 object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-6">
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-white hover:text-primary"><i class="fa fa-envelope"></i></a>
+                                <a href="#" class="text-white hover:text-primary"><i class="fa fa-linkedin"></i></a>
+                                <a href="#" class="text-white hover:text-primary"><i class="fa fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-dark mb-1">Prof. Chen Huafu</h3>
+                        <p class="text-primary font-medium mb-3">Lab Director</p>
+                        <p class="text-dark/70 text-sm">
+                            Professor Chen leads the laboratory with expertise in brain imaging, pattern recognition, and computational neuroscience.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2: Researcher -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden group hover:shadow-xl transition-all">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/id/1000/400/400" alt="Dr. Li Wei" class="w-full h-64 object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-6">
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-white hover:text-primary"><i class="fa fa-envelope"></i></a>
+                                <a href="#" class="text-white hover:text-primary"><i class="fa fa-linkedin"></i></a>
+                                <a href="#" class="text-white hover:text-primary"><i class="fa fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-dark mb-1">Dr. Li Wei</h3>
+                        <p class="text-primary font-medium mb-3">Senior Researcher</p>
+                        <p class="text-dark/70 text-sm">
+                            Dr. Li specializes in fMRI data analysis and has published extensively on neural correlates of schizophrenia.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3: Postdoc -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden group hover:shadow-xl transition-all">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/id/1003/400/400" alt="Dr. Zhang Xia" class="w-full h-64 object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-6">
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-white hover:text-primary"><i class="fa fa-envelope"></i></a>
+                                <a href="#" class="text-white hover:text-primary"><i class="fa fa-linkedin"></i></a>
+                                <a href="#" class="text-white hover:text-primary"><i class="fa fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-dark mb-1">Dr. Zhang Xia</h3>
+                        <p class="text-primary font-medium mb-3">Postdoctoral Fellow</p>
+                        <p class="text-dark/70 text-sm">
+                            Dr. Zhang's research focuses on machine learning applications for neuroimaging and biomarker discovery.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 4: PhD Student -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden group hover:shadow-xl transition-all">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/id/1005/400/400" alt="Wang Mei" class="w-full h-64 object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-6">
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-white hover:text-primary"><i class="fa fa-envelope"></i></a>
+                                <a href="#" class="text-white hover:text-primary"><i class="fa fa-linkedin"></i></a>
+                                <a href="#" class="text-white hover:text-primary"><i class="fa fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-dark mb-1">Wang Mei</h3>
+                        <p class="text-primary font-medium mb-3">PhD Candidate</p>
+                        <p class="text-dark/70 text-sm">
+                            Wang Mei is researching early detection methods for schizophrenia using multimodal neuroimaging data.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="#" class="inline-block px-8 py-3 bg-white border border-primary text-primary hover:bg-primary/5 rounded-md transition-colors">
+                    View Full Team
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">Publications</h2>
+                <p class="text-lg text-dark/70 max-w-3xl mx-auto">
+                    Our recent research publications in leading neuroscience and medical imaging journals
+                </p>
+                <div class="w-20 h-1 bg-primary mx-auto mt-6"></div>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Publication 1 -->
+                <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg transition-shadow">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-1/4">
+                            <div class="bg-neutral rounded-lg overflow-hidden h-40 flex items-center justify-center">
+                                <img src="https://picsum.photos/id/1060/400/300" alt="Publication thumbnail" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <span class="text-sm text-primary font-medium">2025 • NeuroImage</span>
+                            <h3 class="text-xl font-semibold text-dark mb-2 mt-2">Multimodal Neuroimaging Biomarkers for Early Detection of Schizophrenia</h3>
+                            <p class="text-dark/70 mb-4">
+                                Li W, Zhang X, Wang M, Chen H. This study identifies novel fMRI and structural MRI biomarkers for early detection of schizophrenia using machine learning techniques.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">fMRI</span>
+                                <span class="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">Machine Learning</span>
+                                <span class="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">Biomarkers</span>
+                                <span class="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">Schizophrenia</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="#" class="text-primary hover:text-primary/80 font-medium text-sm">
+                                    <i class="fa fa-link mr-1"></i> View Article
+                                </a>
+                                <a href="#" class="text-dark/70 hover:text-primary font-medium text-sm">
+                                    <i class="fa fa-download mr-1"></i> PDF
+                                </a>
+                                <a href="#" class="text-dark/70 hover:text-primary font-medium text-sm">
+                                    <i class="fa fa-database mr-1"></i> Data
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Publication 2 -->
+                <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg transition-shadow">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-1/4">
+                            <div class="bg-neutral rounded-lg overflow-hidden h-40 flex items-center justify-center">
+                                <img src="https://picsum.photos/id/1058/400/300" alt="Publication thumbnail" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <span class="text-sm text-primary font-medium">2024 • Biological Psychiatry</span>
+                            <h3 class="text-xl font-semibold text-dark mb-2 mt-2">Aberrant Default Mode Network Connectivity in First-Episode Schizophrenia</h3>
+                            <p class="text-dark/70 mb-4">
+                                Zhang X, Chen H, Li W, et al. This research reveals disrupted connectivity patterns in the default mode network of first-episode schizophrenia patients.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">fMRI</span>
+                                <span class="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">Connectivity</span>
+                                <span class="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">Default Mode Network</span>
+                                <span class="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">First Episode</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="#" class="text-primary hover:text-primary/80 font-medium text-sm">
+                                    <i class="fa fa-link mr-1"></i> View Article
+                                </a>
+                                <a href="#" class="text-dark/70 hover:text-primary font-medium text-sm">
+                                    <i class="fa fa-download mr-1"></i> PDF
+                                </a>
+                                <a href="#" class="text-dark/70 hover:text-primary font-medium text-sm">
+                                    <i class="fa fa-database mr-1"></i> Data
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Publication 3 -->
+                <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg transition-shadow">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-1/4">
+                            <div class="bg-neutral rounded-lg overflow-hidden h-40 flex items-center justify-center">
+                                <img src="https://picsum.photos/id/1057/400/300" alt="Publication thumbnail" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <span class="text-sm text-primary font-medium">2024 • Frontiers in Neuroscience</span>
+                            <h3 class="text-xl font-semibold text-dark mb-2 mt-2">Deep Learning-Based Classification of Schizophrenia Subtypes Using fMRI Data</h3>
+                            <p class="text-dark/70 mb-4">
+                                Wang M, Li W, Chen H. This paper presents a novel deep learning framework for classifying schizophrenia subtypes based on resting-state fMRI data.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">Deep Learning</span>
+                                <span class="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">fMRI</span>
+                                <span class="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">Subtyping</span>
+                                <span class="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">Resting-State</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="#" class="text-primary hover:text-primary/80 font-medium text-sm">
+                                    <i class="fa fa-link mr-1"></i> View Article
+                                </a>
+                                <a href="#" class="text-dark/70 hover:text-primary font-medium text-sm">
+                                    <i class="fa fa-download mr-1"></i> PDF
+                                </a>
+                                <a href="#" class="text-dark/70 hover:text-primary font-medium text-sm">
+                                    <i class="fa fa-database mr-1"></i> Data
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="#" class="inline-block px-8 py-3 bg-white border border-primary text-primary hover:bg-primary/5 rounded-md transition-colors">
+                    View All Publications
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-neutral">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">Contact Us</h2>
+                <p class="text-lg text-dark/70 max-w-3xl mx-auto">
+                    We welcome collaborations and inquiries about our research. Feel free to reach out to us.
+                </p>
+                <div class="w-20 h-1 bg-primary mx-auto mt-6"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                        <h3 class="text-xl font-semibold text-dark mb-6">Get in Touch</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fa fa-envelope text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-dark mb-1">Email</h4>
+                                    <a href="mailto:lab@uestc.edu.cn" class="text-dark/70 hover:text-primary">lab@uestc.edu.cn</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fa fa-weixin text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-dark mb-1">WeChat Public Account</h4>
+                                    <p class="text-dark/70">BrainImagingResearch</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fa fa-map-marker text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-dark mb-1">Location</h4>
+                                    <p class="text-dark/70">
+                                        School of Life Science and Technology<br>
+                                        University of Electronic Science and Technology of China<br>
+                                        Chengdu, Sichuan, China
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fa fa-github text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-dark mb-1">GitHub</h4>
+                                    <a href="https://github.com/brain-imaging-group" class="text-dark/70 hover:text-primary">github.com/brain-imaging-group</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <h3 class="text-xl font-semibold text-dark mb-6">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-12 h-12 bg-primary/10 hover:bg-primary/20 rounded-lg flex items-center justify-center text-primary transition-colors">
+                                <i class="fa fa-weixin"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-primary/10 hover:bg-primary/20 rounded-lg flex items-center justify-center text-primary transition-colors">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-primary/10 hover:bg-primary/20 rounded-lg flex items-center justify-center text-primary transition-colors">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-primary/10 hover:bg-primary/20 rounded-lg flex items-center justify-center text-primary transition-colors">
+                                <i class="fa fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <h3 class="text-xl font-semibold text-dark mb-6">Send us a Message</h3>
+                        
+                        <form>
+                            <div class="mb-6">
+                                <label for="name" class="block text-dark font-medium mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring focus:ring-primary/20 transition-colors" placeholder="Enter your name">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="email" class="block text-dark font-medium mb-2">Your Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring focus:ring-primary/20 transition-colors" placeholder="Enter your email">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="subject" class="block text-dark font-medium mb-2">Subject</label>
+                                <input type="text" id="subject" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring focus:ring-primary/20 transition-colors" placeholder="Enter subject">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="message" class="block text-dark font-medium mb-2">Message</label>
+                                <textarea id="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring focus:ring-primary/20 transition-colors" placeholder="Enter your message"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3 px-6 rounded-lg transition-colors">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-xl font-semibold mb-6">Brain Imaging and Schizophrenia Group</h3>
+                    <p class="text-white/70 mb-6">
+                        Advancing understanding of brain disorders through fMRI analysis and computational methods.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white/70 hover:text-white">
+                            <i class="fa fa-weixin"></i>
+                        </a>
+                        <a href="#" class="text-white/70 hover:text-white">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-white/70 hover:text-white">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-white/70 hover:text-white">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-medium mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#about" class="text-white/70 hover:text-white">About Us</a></li>
+                        <li><a href="#research" class="text-white/70 hover:text-white">Research</a></li>
+                        <li><a href="#members" class="text-white/70 hover:text-white">Team Members</a></li>
+                        <li><a href="#publications" class="text-white/70 hover:text-white">Publications</a></li>
+                        <li><a href="#contact" class="text-white/70 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-medium mb-6">Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-white/70 hover:text-white">Data Sets</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white">Software Tools</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white">Research Protocols</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white">Lab Policies</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white">Opportunities</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-medium mb-6">Affiliations</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <a href="https://www.uestc.edu.cn/" class="text-white/70 hover:text-white flex items-center">
+                                <img src="https://picsum.photos/id/1015/60/60" alt="University of Electronic Science and Technology of China" class="w-12 h-12 rounded-lg mr-3">
+                                <span>University of Electronic Science and Technology of China</span>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#" class="text-white/70 hover:text-white flex items-center">
+                                <img src="https://picsum.photos/id/1016/60/60" alt="School of Life Science and Technology" class="w-12 h-12 rounded-lg mr-3">
+                                <span>School of Life Science and Technology</span>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#" class="text-white/70 hover:text-white flex items-center">
+                                <img src="https://picsum.photos/id/1018/60/60" alt="Brain Imaging and Pattern Recognition Laboratory" class="w-12 h-12 rounded-lg mr-3">
+                                <span>Brain Imaging and Pattern Recognition Lab</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-white/50 text-sm mb-4 md:mb-0">
+                        © 2025 Brain Imaging and Schizophrenia Group. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-white/50 hover:text-white text-sm">Privacy Policy</a>
+                        <a href="#" class="text-white/50 hover:text-white text-sm">Terms of Service</a>
+                        <a href="#" class="text-white/50 hover:text-white text-sm">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.remove('bg-white/90');
+                navbar.classList.add('bg-white');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.add('bg-white/90');
+                navbar.classList.remove('bg-white');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Reveal elements on scroll
+        const revealElements = document.querySelectorAll('.grid, section > div > div.text-center, #logo-section .max-w-3xl');
+        
+        const revealOnScroll = () => {
+            revealElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('opacity-100');
+                    element.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        };
+        
+        // Set initial state
+        revealElements.forEach(element => {
+            element.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+        });
+        
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll(); // Check on page load
+    </script>
+</body>
+</html>
+    
