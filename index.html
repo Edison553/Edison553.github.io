@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapping Schizophrenia Brain Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/logo/MSBlogo_background_t1.png">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="font-sans text-gray-800">
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="fixed w-full bg-white/90 backdrop-blur-sm z-50 transition-all duration-300 shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <!-- Logo and Lab Name -->
+            <div class="flex items-center space-x-2 group">
+                <a href="index.html" class="flex items-center">
+                    <img id="logo" src="assets/logo/MSBlogo.png" alt="Lab Logo"
+                        class="h-10 object-contain transition-opacity duration-500 group-hover:opacity-0">
+                    <span id="lab-name"
+                        class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-lg font-bold tracking-tight">Mapping
+                        Schizophrenia Brain</span>
+                </a>
+            </div>
+
+            <!-- Navigation Links - Desktop -->
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Home</a>
+                <a href="members.html"
+                    class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Members</a>
+                <a href="research.html"
+                    class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Research</a>
+                <a href="contact.html"
+                    class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
+                <i class="fa fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+                <a href="index.html"
+                    class="text-gray-600 hover:text-blue-600 py-2 transition-colors duration-300">Home</a>
+                <a href="members.html"
+                    class="text-gray-600 hover:text-blue-600 py-2 transition-colors duration-300">Members</a>
+                <a href="research.html"
+                    class="text-gray-600 hover:text-blue-600 py-2 transition-colors duration-300">Research</a>
+                <a href="contact.html"
+                    class="text-gray-600 hover:text-blue-600 py-2 transition-colors duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50 z-0"></div>
+        <div class="container mx-auto px-4 z-10 text-center">
+            <div class="opacity-0 transform translate-y-10 transition-all duration-1000" id="hero-content">
+                <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold text-gray-800 mb-6 tracking-tight">
+                    Mapping Schizophrenia Brain
+                </h1>
+                <p class="text-[clamp(1.2rem,2vw,1.5rem)] text-gray-600 max-w-3xl mx-auto mb-10 leading-relaxed">
+                    Exploring the neural basis of schizophrenia through fMRI, image processing, and mathematical
+                    analysis.
+                </p>
+                <a href="#about"
+                    class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    Learn More
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#about" class="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                <i class="fa fa-angle-down text-3xl"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-gray-800 mb-10 text-center">Our Research
+                    Objectives</h2>
+
+                <div class="grid md:grid-cols-2 gap-10 mb-16">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div class="text-blue-600 text-4xl mb-4">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Discover Disease Patterns</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Using fMRI data and advanced image processing techniques to identify distinct neural
+                            patterns associated with schizophrenia.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div class="text-blue-600 text-4xl mb-4">
+                            <i class="fa fa-flask"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Biomarker Identification</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Developing and validating novel biomarkers for early detection, prognosis, and personalized
+                            treatment strategies.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div class="text-blue-600 text-4xl mb-4">
+                            <i class="fa fa-dna"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Multi-modal Integration</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Integrating neuroimaging data with genetic information (GWAS, SNP) to uncover the complex
+                            interplay between genes and brain function.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div class="text-blue-600 text-4xl mb-4">
+                            <i class="fa fa-heartbeat"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Clinical Translation</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Translating basic research findings into clinical applications to improve diagnosis and
+                            treatment of schizophrenia.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="research.html"
+                        class="inline-block text-blue-600 hover:text-blue-800 font-medium transition-colors duration-300 group">
+                        Explore our research <i
+                            class="fa fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Affiliation Section -->
+        <!-- Affiliation Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-[clamp(1.5rem,2.5vw,2rem)] font-bold text-gray-800 mb-6">Affiliations</h2>
+                
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                    We are part of the 
+                    <a href="https://www.uestc.edu.cn/" target="_blank" class="text-blue-600 hover:text-blue-800 transition-colors duration-300 font-medium">University of Electronic Science and Technology of China</a>, 
+                    <a href="https://www.life.uestc.edu.cn/index.htm" target="_blank" class="text-blue-600 hover:text-blue-800 transition-colors duration-300 font-medium">School of Life Science and Technology</a>, 
+                    <a href="https://www.life.uestc.edu.cn/kytd.jsp?urltype=tree.TreeTempUrl&wbtreeid=1223" target="_blank" class="text-blue-600 hover:text-blue-800 transition-colors duration-300 font-medium">Brain Imaging and Pattern Recognition Group</a> 
+                    led by <a href="https://www.life.uestc.edu.cn/sznr2.jsp?urltype=news.NewsContentUrl&wbtreeid=1223&wbnewsid=3603" target="_blank" class="text-blue-600 hover:text-blue-800 transition-colors duration-300 font-medium">Prof. Huafu Chen</a>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-10">
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Mapping Schizophrenia Brain</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        We are dedicated to understanding the neural mechanisms of schizophrenia through advanced
+                        neuroimaging and computational methods.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html"
+                                class="text-gray-400 hover:text-white transition-colors duration-300">Home</a></li>
+                        <li><a href="members.html"
+                                class="text-gray-400 hover:text-white transition-colors duration-300">Members</a></li>
+                        <li><a href="research.html"
+                                class="text-gray-400 hover:text-white transition-colors duration-300">Research</a></li>
+                        <li><a href="contact.html"
+                                class="text-gray-400 hover:text-white transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fa fa-envelope text-gray-400 mr-3"></i>
+                            <a href="mailto:msb@uestc.edu.cn"
+                                class="text-gray-400 hover:text-white transition-colors duration-300">msb@uestc.edu.cn</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-map-marker text-gray-400 mr-3"></i>
+                            <span class="text-gray-400">University of Electronic Science and Technology of China</span>
+                        </li>
+                    </ul>
+
+                    <div class="mt-6 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fa fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fa fa-github text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fa fa-weixin text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-500">
+                <p>&copy; 2025 Mapping Schizophrenia Brain Lab. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

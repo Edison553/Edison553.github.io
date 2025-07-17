@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Mapping Schizophrenia Brain Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="font-sans text-gray-800">
+    <!-- Navigation Bar (same as index.html) -->
+    <nav id="navbar" class="fixed w-full bg-white/90 backdrop-blur-sm z-50 transition-all duration-300 shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-2 group">
+                <a href="index.html" class="flex items-center">
+                    <img id="logo" src="assets/logo/MSBlogo.png" alt="Lab Logo" class="h-10 object-contain transition-opacity duration-500 group-hover:opacity-0">
+                    <span id="lab-name" class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-lg font-bold tracking-tight">Mapping Schizophrenia Brain</span>
+                </a>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Home</a>
+                <a href="members.html" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Members</a>
+                <a href="research.html" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Research</a>
+                <a href="contact.html" class="text-blue-600 font-medium">Contact</a>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
+                <i class="fa fa-bars text-xl"></i>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600 py-2 transition-colors duration-300">Home</a>
+                <a href="members.html" class="text-gray-600 hover:text-blue-600 py-2 transition-colors duration-300">Members</a>
+                <a href="research.html" class="text-gray-600 hover:text-blue-600 py-2 transition-colors duration-300">Research</a>
+                <a href="contact.html" class="text-blue-600 font-medium py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="pt-24 pb-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h1 class="text-[clamp(2rem,4vw,3rem)] font-bold text-gray-800 mb-4">Contact Us</h1>
+            <p class="text-gray-600 max-w-3xl text-lg">
+                We welcome collaborations and inquiries from researchers, clinicians, and individuals interested in our work. Please reach out to us through the contact information below.
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-10">
+                <!-- Contact Information -->
+                <div>
+                    <h2 class="text-[clamp(1.5rem,2.5vw,2rem)] font-bold text-gray-800 mb-6">Contact Information</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fa fa-envelope text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800 mb-1">Email</h3>
+                                <p class="text-gray-600">
+                                    General Inquiries: <a href="mailto:msb@uestc.edu.cn" class="text-blue-600 hover:underline">msb@uestc.edu.cn</a>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fa fa-map-marker text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800 mb-1">Address</h3>
+                                <p class="text-gray-600">
+                                    Mapping Schizophrenia Brain Lab<br>
+                                    School of Life Science and Technology<br>
+                                    University of Electronic Science and Technology of China<br>
+                                    No. 2006 Xiyuan Ave, West Hi-Tech Zone<br>
+                                    Chengdu, Sichuan 611731<br>
+                                    China
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fa fa-weixin text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800 mb-1">WeChat Official Account</h3>
+                                <div class="mt-2">
+                                    <img src="assets/wechat-qrcode.jpg" alt="WeChat QR Code" class="w-40 h-40 object-cover rounded-lg shadow-sm">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <h3 class="font-bold text-gray-800 mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full transition-colors duration-300">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="#" class="bg-gray-800 hover:bg-gray-900 text-white p-3 rounded-full transition-colors duration-300">
+                                <i class="fa fa-github"></i>
+                            </a>
+                            <a href="#" class="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full transition-colors duration-300">
+                                <i class="fa fa-weixin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div>
+                    <h2 class="text-[clamp(1.5rem,2.5vw,2rem)] font-bold text-gray-800 mb-6">Send Us a Message</h2>
+                    
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="Enter your name">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="Enter your email">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="Enter subject">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="Enter your message"></textarea>
+                        </div>
+                        
+                        <div>
+                            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Lab Location -->
+            <section class="mt-20">
+                <h2 class="text-[clamp(1.5rem,2.5vw,2rem)] font-bold text-gray-800 mb-6">Our Location</h2>
+                
+                <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+                    <div class="aspect-video bg-gray-200 rounded-lg overflow-hidden relative">
+                        <!-- Map placeholder -->
+                        <img src="https://picsum.photos/id/1031/800/450" alt="Lab Location Map" class="w-full h-full object-cover">
+                        
+                        <!-- Map marker -->
+                        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+                            <div class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg">
+                                <i class="fa fa-map-marker text-xl"></i>
+                            </div>
+                        </div>
+                        
+                        <!-- Map controls -->
+                        <div class="absolute bottom-4 right-4 flex space-x-2">
+                            <button class="bg-white text-gray-800 rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:bg-gray-100 transition-colors duration-300">
+                                <i class="fa fa-plus"></i>
+                            </button>
+                            <button class="bg-white text-gray-800 rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:bg-gray-100 transition-colors duration-300">
+                                <i class="fa fa-minus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h3 class="font-bold text-gray-800 mb-2">How to Find Us</h3>
+                        <p class="text-gray-600">
+                            Our lab is located in the Life Science and Technology Building on the main campus of the University of Electronic Science and Technology of China. We are on the 5th floor, Room 503.
+                        </p>
+                        
+                        <div class="mt-4 grid md:grid-cols-2 gap-4">
+                            <div>
+                                <h4 class="font-medium text-gray-800 mb-1">By Public Transport</h4>
+                                <p class="text-gray-600">
+                                    The nearest subway station is Line 2, Xipu Station (Exit A), which is approximately a 15-minute walk from the campus. Buses 116, 221, and 311 also stop near the university.
+                                </p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-medium text-gray-800 mb-1">By Car</h4>
+                                <p class="text-gray-600">
+                                    Parking is available on campus. Please use the main entrance on Xiyuan Avenue and follow the signs to the Life Science and Technology Building.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-10">
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Mapping Schizophrenia Brain</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        We are dedicated to understanding the neural mechanisms of schizophrenia through advanced neuroimaging and computational methods.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors duration-300">Home</a></li>
+                        <li><a href="members.html" class="text-gray-400 hover:text-white transition-colors duration-300">Members</a></li>
+                        <li><a href="research.html" class="text-gray-400 hover:text-white transition-colors duration-300">Research</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fa fa-envelope text-gray-400 mr-3"></i>
+                            <a href="mailto:msb@uestc.edu.cn" class="text-gray-400 hover:text-white transition-colors duration-300">msb@uestc.edu.cn</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-map-marker text-gray-400 mr-3"></i>
+                            <span class="text-gray-400">University of Electronic Science and Technology of China</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-6 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fa fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fa fa-github text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fa fa-weixin text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-500">
+                <p>&copy; 2025 Mapping Schizophrenia Brain Lab. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+    

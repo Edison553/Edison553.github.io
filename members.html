@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members | Mapping Schizophrenia Brain Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="font-sans text-gray-800">
+    <!-- Navigation Bar (same as index.html) -->
+    <nav id="navbar" class="fixed w-full bg-white/90 backdrop-blur-sm z-50 transition-all duration-300 shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-2 group">
+                <a href="index.html" class="flex items-center">
+                    <img id="logo" src="assets/logo/MSBlogo.png" alt="Lab Logo" class="h-10 object-contain transition-opacity duration-500 group-hover:opacity-0">
+                    <span id="lab-name" class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-lg font-bold tracking-tight">Mapping Schizophrenia Brain</span>
+                </a>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Home</a>
+                <a href="members.html" class="text-blue-600 font-medium">Members</a>
+                <a href="research.html" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Research</a>
+                <a href="contact.html" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Contact</a>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
+                <i class="fa fa-bars text-xl"></i>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600 py-2 transition-colors duration-300">Home</a>
+                <a href="members.html" class="text-blue-600 font-medium py-2">Members</a>
+                <a href="research.html" class="text-gray-600 hover:text-blue-600 py-2 transition-colors duration-300">Research</a>
+                <a href="contact.html" class="text-gray-600 hover:text-blue-600 py-2 transition-colors duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="pt-24 pb-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h1 class="text-[clamp(2rem,4vw,3rem)] font-bold text-gray-800 mb-4">Our Team</h1>
+            <p class="text-gray-600 max-w-3xl text-lg">
+                Meet our diverse team of researchers, including postdocs, PhD students, and master's students, all working together to advance our understanding of schizophrenia.
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <!-- Postdocs Section -->
+            <section class="mb-20">
+                <h2 class="text-[clamp(1.5rem,2.5vw,2rem)] font-bold text-gray-800 mb-10">Group Leader</h2>
+                
+                <div class="grid md:grid-cols-2 gap-10">
+                    <!-- Postdoc 1 -->
+                    <div class="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 group">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3 overflow-hidden">
+                                <img src="assets\members\Fanys.png" alt="Dr. Yun-Shuang Fan" class="w-full h-64 object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="md:w-2/3 p-6">
+                                <h3 class="text-xl font-bold mb-1 text-gray-800">Dr. Yun-Shuang Fan</h3>
+                                <p class="text-blue-600 mb-3">Postdoctoral Fellow</p>
+                                <p class="text-gray-600 mb-4">
+                                    Fan specializes in fMRI data analysis and computational modeling of brain networks. Her current work focuses on identifying functional connectivity biomarkers in schizophrenia.
+                                </p>
+                                <div class="flex space-x-3">
+                                    <a href="mailto:sarah.johnson@uestc.edu.cn" class="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                                        <i class="fa fa-envelope"></i>
+                                    </a>
+                                    <a href="https://twitter.com/sarah_neuro" target="_blank" class="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="https://scholar.google.com/citations?user=CY_RlkAAAAAJ&hl=en" target="_blank" class="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                                        <i class="fa fa-google"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Postdoc 2 -->
+                    <!-- <div class="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 group">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3 overflow-hidden">
+                                <img src="assets/members/postdocs/member2.jpg" alt="Dr. Michael Chen" class="w-full h-64 object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="md:w-2/3 p-6">
+                                <h3 class="text-xl font-bold mb-1 text-gray-800">Dr. Michael Chen</h3>
+                                <p class="text-blue-600 mb-3">Postdoctoral Fellow</p>
+                                <p class="text-gray-600 mb-4">
+                                    Michael combines fMRI and genetic data to investigate the neurobiological mechanisms underlying schizophrenia. His research employs machine learning to predict treatment response.
+                                </p>
+                                <div class="flex space-x-3">
+                                    <a href="mailto:michael.chen@uestc.edu.cn" class="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                                        <i class="fa fa-envelope"></i>
+                                    </a>
+                                    <a href="https://twitter.com/neurogen_mike" target="_blank" class="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="https://scholar.google.com/citations?user=example" target="_blank" class="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                                        <i class="fa fa-google"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </section>
+            
+            <!-- PhD Students Section -->
+            <section class="mb-20">
+                <h2 class="text-[clamp(1.5rem,2.5vw,2rem)] font-bold text-gray-800 mb-10">PhD Students</h2>
+                
+                <div class="grid md:grid-cols-2 gap-10">
+                    <!-- PhD Student 1 -->
+                    <div class="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 group">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3 overflow-hidden">
+                                <img src="assets/members/phd/member1.jpg" alt="Alex Rodriguez" class="w-full h-64 object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="md:w-2/3 p-6">
+                                <h3 class="text-xl font-bold mb-1 text-gray-800">Liju Liu</h3>
+                                <p class="text-blue-600 mb-3">PhD Candidate</p>
+                                <p class="text-gray-600 mb-4">
+                                    Alex's research focuses on applying graph theory and machine learning to fMRI data to identify novel biomarkers for schizophrenia. He is also interested in translational neuroscience.
+                                </p>
+                                <div class="flex space-x-3">
+                                    <a href="mailto:alex.rodriguez@uestc.edu.cn" class="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                                        <i class="fa fa-envelope"></i>
+                                    </a>
+                                    <a href="https://twitter.com/alex_neuro" target="_blank" class="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="https://scholar.google.com/citations?user=example" target="_blank" class="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                                        <i class="fa fa-google"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- PhD Student 2 -->
+                    <div class="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 group">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3 overflow-hidden">
+                                <img src="assets/members/phd/member2.jpg" alt="Emma Wilson" class="w-full h-64 object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="md:w-2/3 p-6">
+                                <h3 class="text-xl font-bold mb-1 text-gray-800">Yiqi Mi</h3>
+                                <p class="text-blue-600 mb-3">PhD Candidate</p>
+                                <p class="text-gray-600 mb-4">
+                                    Emma is investigating the role of genetic factors in functional brain connectivity using multimodal imaging and GWAS data. Her work aims to bridge genomic and neuroimaging findings.
+                                </p>
+                                <div class="flex space-x-3">
+                                    <a href="mailto:emma.wilson@uestc.edu.cn" class="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                                        <i class="fa fa-envelope"></i>
+                                    </a>
+                                    <a href="https://twitter.com/emma_neurogen" target="_blank" class="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="https://scholar.google.com/citations?user=example" target="_blank" class="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                                        <i class="fa fa-google"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </section>
+            
+            <!-- Master's Students Section -->
+            <section>
+                <h2 class="text-[clamp(1.5rem,2.5vw,2rem)] font-bold text-gray-800 mb-10">Master's Students</h2>
+                
+                <div class="grid md:grid-cols-2 gap-10">
+                    <!-- Master's Student 1 -->
+                    <div class="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 group">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3 overflow-hidden">
+                                <img src="assets/members/masters/member1.jpg" alt="James Lee" class="w-full h-64 object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="md:w-2/3 p-6">
+                                <h3 class="text-xl font-bold mb-1 text-gray-800">Yuting Xu</h3>
+                                <p class="text-blue-600 mb-3">Master's Student</p>
+                                <p class="text-gray-600 mb-4">
+                                    James is working on developing novel image processing techniques for fMRI data. His project focuses on improving the signal-to-noise ratio in resting-state fMRI.
+                                </p>
+                                <div class="flex space-x-3">
+                                    <a href="mailto:james.lee@uestc.edu.cn" class="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                                        <i class="fa fa-envelope"></i>
+                                    </a>
+                                    <a href="https://twitter.com/james_neuro" target="_blank" class="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="https://scholar.google.com/citations?user=example" target="_blank" class="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                                        <i class="fa fa-google"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Master's Student 2 -->
+                    <div class="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 group">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3 overflow-hidden">
+                                <img src="assets/members/masters/member2.jpg" alt="Sophia Martinez" class="w-full h-64 object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="md:w-2/3 p-6">
+                                <h3 class="text-xl font-bold mb-1 text-gray-800">Wenfeng Jing</h3>
+                                <p class="text-blue-600 mb-3">Master's Student</p>
+                                <p class="text-gray-600 mb-4">
+                                    Sophia is researching the application of deep learning methods to identify schizophrenia subtypes from fMRI and genetic data. Her work aims to support personalized medicine approaches.
+                                </p>
+                                <div class="flex space-x-3">
+                                    <a href="mailto:sophia.martinez@uestc.edu.cn" class="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                                        <i class="fa fa-envelope"></i>
+                                    </a>
+                                    <a href="https://twitter.com/sophia_neuroai" target="_blank" class="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="https://scholar.google.com/citations?user=example" target="_blank" class="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                                        <i class="fa fa-google"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Master's Student 2 -->
+                    <div class="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 group">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3 overflow-hidden">
+                                <img src="assets/members/masters/member2.jpg" alt="Sophia Martinez" class="w-full h-64 object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="md:w-2/3 p-6">
+                                <h3 class="text-xl font-bold mb-1 text-gray-800">Maowei Ye</h3>
+                                <p class="text-blue-600 mb-3">Master's Student</p>
+                                <p class="text-gray-600 mb-4">
+                                    Sophia is researching the application of deep learning methods to identify schizophrenia subtypes from fMRI and genetic data. Her work aims to support personalized medicine approaches.
+                                </p>
+                                <div class="flex space-x-3">
+                                    <a href="mailto:sophia.martinez@uestc.edu.cn" class="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                                        <i class="fa fa-envelope"></i>
+                                    </a>
+                                    <a href="https://twitter.com/sophia_neuroai" target="_blank" class="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="https://scholar.google.com/citations?user=example" target="_blank" class="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                                        <i class="fa fa-google"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Master's Student 2 -->
+                    <div class="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 group">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3 overflow-hidden">
+                                <img src="assets/members/masters/member2.jpg" alt="Sophia Martinez" class="w-full h-64 object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="md:w-2/3 p-6">
+                                <h3 class="text-xl font-bold mb-1 text-gray-800">Xiaoxue Fu</h3>
+                                <p class="text-blue-600 mb-3">Master's Student</p>
+                                <p class="text-gray-600 mb-4">
+                                    Sophia is researching the application of deep learning methods to identify schizophrenia subtypes from fMRI and genetic data. Her work aims to support personalized medicine approaches.
+                                </p>
+                                <div class="flex space-x-3">
+                                    <a href="mailto:sophia.martinez@uestc.edu.cn" class="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                                        <i class="fa fa-envelope"></i>
+                                    </a>
+                                    <a href="https://twitter.com/sophia_neuroai" target="_blank" class="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="https://scholar.google.com/citations?user=example" target="_blank" class="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                                        <i class="fa fa-google"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Master's Student 3 -->
+                    <div class="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 group">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3 overflow-hidden">
+                                <img src="assets/members/masters/member2.jpg" alt="Sophia Martinez" class="w-full h-64 object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="md:w-2/3 p-6">
+                                <h3 class="text-xl font-bold mb-1 text-gray-800">Zihan Zhang</h3>
+                                <p class="text-blue-600 mb-3">Master's Student</p>
+                                <p class="text-gray-600 mb-4">
+                                    Sophia is researching the application of deep learning methods to identify schizophrenia subtypes from fMRI and genetic data. Her work aims to support personalized medicine approaches.
+                                </p>
+                                <div class="flex space-x-3">
+                                    <a href="mailto:sophia.martinez@uestc.edu.cn" class="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                                        <i class="fa fa-envelope"></i>
+                                    </a>
+                                    <a href="https://twitter.com/sophia_neuroai" target="_blank" class="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="https://scholar.google.com/citations?user=example" target="_blank" class="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                                        <i class="fa fa-google"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-10">
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Mapping Schizophrenia Brain</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        We are dedicated to understanding the neural mechanisms of schizophrenia through advanced neuroimaging and computational methods.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors duration-300">Home</a></li>
+                        <li><a href="members.html" class="text-gray-400 hover:text-white transition-colors duration-300">Members</a></li>
+                        <li><a href="research.html" class="text-gray-400 hover:text-white transition-colors duration-300">Research</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fa fa-envelope text-gray-400 mr-3"></i>
+                            <a href="mailto:msb@uestc.edu.cn" class="text-gray-400 hover:text-white transition-colors duration-300">msb@uestc.edu.cn</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-map-marker text-gray-400 mr-3"></i>
+                            <span class="text-gray-400">University of Electronic Science and Technology of China</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-6 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fa fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fa fa-github text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fa fa-weixin text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-500">
+                <p>&copy; 2025 Mapping Schizophrenia Brain Lab. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+    
